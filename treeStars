@@ -1,0 +1,34 @@
+package fsfal;
+
+import java.util.Scanner;
+
+public class FirstProgram {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = Integer.parseInt(sc.nextLine());
+		
+		
+		for(int i=0; i<=n; i++) {
+			String spaces = repeatString(" ", n-i);
+			String stars = repeatString("*", i);
+			System.out.print(spaces);
+			System.out.print(stars);
+			System.out.print("|");
+			System.out.print(stars);
+			System.out.println();
+		}
+
+	}
+	
+	static String repeatString(String toRepeat, int count) {
+		String text = "";
+		for(int i=1; i<=count; i++) {
+			text = text + toRepeat;
+		}
+		return text;
+		
+	}
+
+}
